@@ -1,0 +1,405 @@
+/* ============================================
+   STYLES DE BASE ET THÈME CYBER (Pure CSS)
+   ============================================ */
+:root {
+  --glow-color: #8a76e2;
+  --glow-shadow-soft: rgba(138, 118, 226, 0.4);
+  --glow-shadow-hover: rgba(56, 180, 255, 0.6);
+  --main-bg: #0d0d1a; /* Fond très sombre */
+  --section-bg: #1a1a2e; /* Fond des blocs */
+  --border-color-primary: #8a76e2; /* Violet */
+  --border-color-secondary: #38b4ff; /* Bleu */
+  --text-color-primary: #c0c0c0;
+  --text-color-secondary: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color-primary);
+  background: var(--main-bg);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  /* Glow pour le header */
+  box-shadow: 0 0 30px rgba(100, 70, 200, 0.5);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(138, 118, 226, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(138, 118, 226, 0.8);
+  color: white;
+}
+
+/* ============================================
+   CONTAINER ET SECTIONS
+   ============================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  background: var(--section-bg);
+  /* Bordure géométrique et ombre pour effet glow */
+  border: 2px solid var(--border-color-primary);
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px var(--glow-shadow-soft);
+}
+
+.section h2 {
+  color: #9d8bef;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid var(--border-color-primary);
+  padding-bottom: 0.5rem;
+  text-shadow: 0 0 5px var(--glow-shadow-soft);
+}
+
+.section h3 {
+  color: #b7b7e5;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+/* Style spécifique pour les encadrés d'informations */
+.highlight-box {
+  background: rgba(138, 118, 226, 0.08);
+  border: 1px solid rgba(138, 118, 226, 0.5);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(138, 118, 226, 0.2);
+}
+
+/* ============================================
+   MENU CYBERSÉCURITÉ (NOUVEAU STYLE)
+   ============================================ */
+.cyber-menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 0;
+  margin-top: 1.5rem;
+}
+
+.cyber-menu-item {
+  background: rgba(138, 118, 226, 0.08);
+  padding: 15px 15px;
+  text-align: center;
+  flex-basis: calc(20% - 15px);
+  min-width: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* Simulation d'un look biseauté/technique */
+  border: 2px solid var(--border-color-primary);
+  border-radius: 4px;
+}
+
+.cyber-menu-item:hover {
+  box-shadow: 0 0 15px var(--glow-shadow-hover);
+  transform: translateY(-3px);
+  border-color: var(--border-color-secondary);
+}
+
+.cyber-menu-item .icon {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: var(--border-color-secondary);
+}
+
+.cyber-menu-item .label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color-primary);
+}
+
+/* ============================================
+   OUTILS ET AUTRES CARTES
+   ============================================ */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tool-card {
+  background: var(--section-bg);
+  border: 2px solid var(--border-color-primary);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 0 0 5px rgba(138, 118, 226, 0.1);
+}
+
+.tool-card:hover {
+  box-shadow: 0 0 15px var(--glow-shadow-hover);
+  transform: translateY(-2px);
+  border-color: var(--border-color-secondary);
+}
+
+.tool-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #9d8bef;
+}
+
+.tool-name {
+  font-weight: 600;
+  color: var(--text-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.tool-desc {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+}
+
+.btn {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.secondary-btn {
+  background: #24292e !important;
+  margin-left: 1rem;
+}
+.secondary-btn:hover {
+  background: #40464f !important;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #586069;
+  background: var(--section-bg);
+  margin-top: 3rem;
+  border-top: 1px solid rgba(138, 118, 226, 0.2);
+}
+
+.architecture-diagram {
+  background: rgba(138, 118, 226, 0.05);
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+  margin: 1.5rem 0;
+  border: 2px dashed rgba(138, 118, 226, 0.4);
+  color: var(--text-color-primary);
+}
+
+.phase {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   STYLES SPÉCIFIQUES À LA CARTE DE REGROUPEMENT
+   ============================================ */
+
+.large-grouping-card {
+  text-align: left;
+  /* Cette carte prend une couleur de fond légèrement différente */
+  background: rgba(26, 26, 46, 0.9);
+}
+
+.grouped-tools-list {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(138, 118, 226, 0.3);
+}
+
+.grouped-tool-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(138, 118, 226, 0.05);
+}
+
+.grouped-tool-item:last-child {
+  border-bottom: none;
+}
+
+.grouped-tool-item .icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: var(--border-color-secondary);
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+.grouped-tool-item .label {
+  font-weight: 400;
+  color: var(--text-color-primary);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .cyber-menu-item {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+/* ============================================
+   STYLES POUR MENU INTERACTIF (Accordéon)
+   ============================================ */
+
+/* 1. État par défaut : cacher les descriptions et listes */
+.tool-card .tool-desc,
+.large-grouping-card .tool-desc,
+.large-grouping-card .grouped-tools-list {
+  /* Ces propriétés masquent l'élément avec une transition douce */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out,
+    margin 0.4s ease-out;
+}
+
+/* 2. État actif : afficher les descriptions */
+.tool-card.is-expanded {
+  cursor: default; /* Change le curseur lorsque la carte est ouverte */
+}
+
+/* Descriptions des cartes simples */
+.tool-card.is-expanded .tool-desc {
+  max-height: 200px; /* Assez grand pour tout afficher */
+  opacity: 1;
+  padding-top: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  /* Ligne de séparation pour le contenu déroulé */
+  border-top: 1px dashed rgba(138, 118, 226, 0.2);
+  /* Retire la ligne pour la première carte simple si elle est déjà au-dessus */
+  border-top-width: 1px;
+}
+
+/* Contenu détaillé de la carte de regroupement (description + liste) */
+.large-grouping-card.is-expanded .tool-desc {
+  max-height: 200px;
+  opacity: 1;
+  padding-top: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  border-top: 1px dashed rgba(138, 118, 226, 0.2);
+}
+
+.large-grouping-card.is-expanded .grouped-tools-list {
+  max-height: 500px; /* Assez grand pour la liste */
+  opacity: 1;
+  margin-top: 1.5rem !important;
+}
+/* ============================================
+   STYLES POUR BLOQUES DE CONTENU DÉTAILLÉS
+   ============================================ */
+
+/* Masque TOUS les blocs de contenu détaillés par défaut */
+.content-section {
+  /* IMPORTANT: Cache le bloc initialement */
+  display: none; 
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-top: 2rem;
+}
+
+/* Affiche UNIQUEMENT le bloc de contenu dont l'ID est ciblé dans l'URL (#hash) */
+.content-section:target {
+  display: block;
+  opacity: 1;
+}
+
+/* ============================================
+   AJUSTEMENT DU SCROLL POUR UNE MEILLEURE UX
+   ============================================ */
+
+/* Cette règle améliore l'ancrage vers les sections sans les cacher sous le header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px; /* Ajustez cette valeur si votre header est plus grand */
+}
