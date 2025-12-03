@@ -1,160 +1,262 @@
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Lab - Pentest avec Metasploit</title>
+    <link rel="stylesheet" href="main2.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>🔒 Virtual Lab - Pentest avec Metasploit</h1>
+      <p>
+        Rapport académique sur la sécurité offensive et les tests d'intrusion
+      </p>
+      <div class="badges">
+        <span class="badge">🛡️ Cybersécurité</span>
+        <span class="badge">🔍 Pentest</span>
+        <span class="badge">⚙️ Metasploit</span>
+        <span class="badge">🌐 pfSense</span>
+        <span class="badge">🖥️ Virtual Lab</span>
+      </div>
+    </div>
 
-Alternatively, for H1 and H2, an underline-ish style:
+    <div class="container">
+      <div class="section">
+        <h2>📋 À propos du projet</h2>
+        <p>
+          Ce rapport présente un laboratoire virtuel complet de test d'intrusion
+          utilisant <strong>Metasploit Framework</strong>. Le projet démontre
+          une méthodologie professionnelle de pentest, de la reconnaissance
+          réseau à l'exploitation avancée avec pivoting.
+        </p>
 
-Alt-H1
-======
+        <div class="highlight-box">
+          <h3>🎯 Objectifs du projet</h3>
+          <ul style="margin-left: 1.5rem; margin-top: 0.5rem">
+            <li>
+              Mettre en place un environnement virtuel sécurisé pour les tests
+              d'intrusion
+            </li>
+            <li>
+              Configurer un pare-feu pfSense avec règles de filtrage
+              personnalisées
+            </li>
+            <li>Exploiter des vulnérabilités avec Metasploit Framework</li>
+            <li>
+              Réaliser des attaques avancées (pivoting, pass-the-hash, brute
+              force)
+            </li>
+            <li>
+              Documenter les techniques d'exploitation et recommandations de
+              sécurité
+            </li>
+          </ul>
+        </div>
+      </div>
 
-Alt-H2
-------
+      <div class="section">
+        <h2>🎓 Compétences développées</h2>
+        <div class="highlight-box">
+          <ul style="margin-left: 1.5rem">
+            <li>
+              <strong>Reconnaissance réseau</strong> : Nmap, arp-scan,
+              énumération de services
+            </li>
+            <li>
+              <strong>Exploitation de vulnérabilités</strong> : Metasploit,
+              attaques brute force, exploitation MySQL
+            </li>
+            <li>
+              <strong>Post-exploitation</strong> : Meterpreter, extraction de
+              hash, pass-the-hash
+            </li>
+            <li>
+              <strong>Techniques avancées</strong> : Pivoting, proxy SOCKS,
+              routage réseau
+            </li>
+            <li>
+              <strong>Craquage de mots de passe</strong> : John the Ripper,
+              analyse de hashes
+            </li>
+            <li>
+              <strong>Configuration pare-feu</strong> : pfSense, règles de
+              filtrage, segmentation réseau
+            </li>
+            <li>
+              <strong>Accès à distance</strong> : RDP, FTP, contrôle graphique
+            </li>
+          </ul>
+        </div>
+      </div>
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+      <div class="section" id="menu-rapport">
+        <h2>📚 Contenu Détaillé du Rapport</h2>
+        <div class="tools-grid">
+          <div class="tool-card tool-toggle">
+            <div class="tool-icon">🎯</div>
+            <div class="tool-name">Metasploit 6</div>
+            <a href="#metasploit-install" class="tool-desc-link">
+              <div class="tool-desc">
+                Présentation et installation du Framework
+              </div>
+            </a>
+          </div>
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+          <div class="tool-card tool-toggle">
+            <div class="tool-icon">⚙️</div>
+            <div class="tool-name">Laboratoire virtuel</div>
+            <a href="#config-reseau-detail" class="tool-desc-link">
+              <div class="tool-desc">
+                Configuration réseau des machines cibles et de la machine
+                attaquante
+              </div>
+            </a>
+          </div>
 
-Combined emphasis with **asterisks and _underscores_**.
+          <div class="tool-card tool-toggle">
+            <div class="tool-icon">🛡️</div>
+            <div class="tool-name">pfSense</div>
+            <a href="#pfsense-detail" class="tool-desc-link">
+              <div class="tool-desc">
+                Organisation du réseau avec Pare-feu et routeur open source
+              </div>
+            </a>
+          </div>
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+          <div class="tool-card large-grouping-card tool-toggle">
+            <div class="tool-icon">💣</div>
+            <div class="tool-name">Phases d'attaques / Outils Pentest</div>
+            <a href="#outils-pentest-resume" class="tool-desc-link">
+              <div class="tool-desc">
+                Outils clés utilisés pour l'exploitation et la
+                post-exploitation.
+              </div>
+            </a>
 
+            <div class="grouped-tools-list">
+              <a href="#nmap-scan" class="grouped-tool-link">
+                <div class="grouped-tool-item">
+                  <div class="icon">🔍</div>
+                  <div class="label">Nmap : Scan et énumération</div>
+                </div>
+              </a>
+              <a href="#meterpreter-payload" class="grouped-tool-link">
+                <div class="grouped-tool-item">
+                  <div class="icon">💻</div>
+                  <div class="label">Meterpreter : Payload avancé</div>
+                </div>
+              </a>
+              <a href="#john-the-ripper" class="grouped-tool-link">
+                <div class="grouped-tool-item">
+                  <div class="icon">🔓</div>
+                  <div class="label">
+                    John the Ripper : Craquage de mots de passe
+                  </div>
+                </div>
+              </a>
+              <a href="#proxychains-pivoting" class="grouped-tool-link">
+                <div class="grouped-tool-item">
+                  <div class="icon">🌐</div>
+                  <div class="label">Proxychains : Routage et Pivoting</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-1. First ordered list item
-2. Another item
-⋅⋅⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅⋅⋅1. Ordered sub-list
-4. And another item.
+      <div class="section content-section" id="metasploit-install">
+        <h2>🎯 Installation de Metasploit Framework</h2>
+        <div class="highlight-box" style="margin-top: 2rem">
+          <a href="#menu-rapport" class="btn" style="background: #38b4ff">
+            ⬅️ Revenir au menu du rapport
+          </a>
+        </div>
+      </div>
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+      <div class="section content-section" id="nmap-scan">
+        <h2>🔍 Nmap : Scan et énumération</h2>
+        <div class="highlight-box" style="margin-top: 2rem">
+          <a href="#menu-rapport" class="btn" style="background: #38b4ff">
+            ⬅️ Revenir au menu du rapport
+          </a>
+        </div>
+      </div>
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+      <div class="section">
+        <a href="#" class="btn secondary-btn"
+          >⭐ Mes autres projets sur GitHub</a
+        >
+      </div>
+    </div>
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+    <div class="footer">
+      <p>🔐 Projet réalisé dans un cadre académique et éthique</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem">
+        Les techniques présentées sont destinées uniquement à des fins
+        éducatives et doivent être utilisées de manière responsable.
+      </p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggles = document.querySelectorAll(".tool-toggle");
+        const allLinks = document.querySelectorAll(
+          ".tool-desc-link, .grouped-tool-link"
+        );
 
-[I'm an inline-style link](https://www.google.com)
+        // 1. GESTION DE L'ACCORDÉON (Clic sur la carte DIV)
+        toggles.forEach((card) => {
+          card.addEventListener("click", (e) => {
+            // S'assurer que le clic n'est pas sur un lien interne (qui gère la navigation)
+            if (e.target.closest("a")) {
+              return;
+            }
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+            const isExpanded = card.classList.contains("is-expanded");
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+            // Ferme toutes les cartes actuellement ouvertes
+            document
+              .querySelectorAll(".tool-toggle.is-expanded")
+              .forEach((openCard) => {
+                openCard.classList.remove("is-expanded");
+              });
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+            // Ouvre ou ferme la carte cliquée
+            if (!isExpanded) {
+              card.classList.add("is-expanded");
+            }
+          });
+        });
 
-[You can use numbers for reference-style link definitions][1]
+        // 2. GESTION DU LIEN ET DU SURLIGNAGE
+        allLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            // Retire le surlignage de tous les liens
+            allLinks.forEach((l) => l.classList.remove("is-selected"));
 
-Or leave it empty and use the [link text itself].
+            // Applique le surlignage au lien cliqué
+            link.classList.add("is-selected");
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
+            // Ferme l'accordéon après la sélection (bonne UX)
+            const parentCard = link.closest(".tool-toggle");
+            if (parentCard) {
+              parentCard.classList.remove("is-expanded");
+            }
 
-Some text to show that the reference links can follow later.
+            // Le comportement par défaut du lien (navigation vers le #hash) s'exécute ensuite.
+          });
+        });
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
-```python
-s = "Python syntax highlighting"
-print s
-```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
-```
-
-Here is a simple footnote[^1].
-
-A footnote can also have multiple lines[^2].  
-
-You can also use words, to fit your writing style more closely[^note].
-
-[^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
-  This allows you to have a footnote with multiple lines.
-[^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
-    This footnote also has been made with a different syntax using 4 spaces for new lines.
-
-    Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
-
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-
-Three or more...
-
----
-
-Hyphens
-
-***
-
-Asterisks
-
-___
-
-Underscores
-
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+        // GESTION DU SURLIGNAGE AU CHARGEMENT DE LA PAGE (si un hash est présent dans l'URL)
+        const currentHash = window.location.hash;
+        if (currentHash) {
+          const targetLink = document.querySelector(`a[href="${currentHash}"]`);
+          if (targetLink) {
+            targetLink.classList.add("is-selected");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
